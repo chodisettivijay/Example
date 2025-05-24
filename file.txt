@@ -1,0 +1,2 @@
+git checkout feature/branchX
+git pull origin main
