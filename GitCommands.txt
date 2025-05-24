@@ -1,0 +1,44 @@
+1. Initialize git repo 
+git init
+
+2.github remote
+
+git remote add origin https://github.com/chodisettivijay/reponame.git
+
+
+3.add all files
+
+git add .
+
+
+4.commit your files
+
+git commit -m "Commitmessage"
+
+
+5.push initial commit on main branch
+
+git push -u origin main
+
+6.make sure main branch is up to date
+
+git checkout main
+
+git pull origin main
+
+
+7.create and push 5 base branches from main
+
+for branch in base-1 base-2 base-3 base-4 base-5
+
+do 
+	git checkout main
+	git checkout -b $branch
+	git push -u  origin $branch
+done
+
+8.switch back to main branch
+
+git checkout main
+
+
