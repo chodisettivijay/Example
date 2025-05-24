@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PR Monitoring Agent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>PR Monitoring Agent</h1>
+
+      <form id="monitorForm" autocomplete="off" aria-label="PR Monitoring Form">
+        <div class="form-group">
+          <label for="brand">Brand Name:</label>
+          <input
+            type="text"
+            id="brand"
+            name="brand"
+            placeholder="e.g. Tesla"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="keywords">Keywords (comma-separated):</label>
+          <input
+            type="text"
+            id="keywords"
+            name="keywords"
+            placeholder="e.g. Elon Musk, EV"
+            autocomplete="off"
+          />
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Channels:</legend>
+          <div class="checkbox-group" id="channelsGroup">
+            <label>
+              <input type="checkbox" name="channels" value="News" checked />
+              News
+            </label>
+            <label>
+              <input type="checkbox" name="channels" value="Reddit" />
+              Reddit
+            </label>
+            <label>
+              <input type="checkbox" name="channels" value="LinkedIn" />
+              LinkedIn
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="language">Language:</label>
+          <input
+            type="text"
+            id="language"
+            name="language"
+            value="en"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="timeRange">Time Range (hours):</label>
+          <input
+            type="number"
+            id="timeRange"
+            name="timeRange"
+            value="24"
+            min="1"
+            max="168"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email for Alerts:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="off"
+          />
+        </div>
+
+        <button type="submit">Monitor</button>
+      </form>
+
+      <!-- Dynamic Results Area -->
+      <section id="result" class="result-section" aria-live="polite"></section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
